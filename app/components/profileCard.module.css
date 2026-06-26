@@ -1,0 +1,50 @@
+.profileCard{
+    margin: 1em 2em 1em 2em;
+    padding: 1em 0 1em 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 11em;
+    height: 13em;
+    border-radius: var(--mid);
+    gap: var(--small);
+    background: var(--lighterpurple);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.6px);
+    -webkit-backdrop-filter: blur(10.6px);
+    /* border: 1px solid rgba(255, 255, 255, 0.07); */
+    color: var(--whiteFontColor);
+}
+
+.proPic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileText{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.viewButton{
+    margin: 0;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    width: 4em;
+    border-radius: var(--mid);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.6px);
+    -webkit-backdrop-filter: blur(10.6px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    cursor: pointer;
+}
+
+
