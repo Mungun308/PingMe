@@ -1,12 +1,16 @@
 import pool from '@/lib/db'
+import Image from 'next/image'
+import '@/app/globals.css'
+import React from "react";
+import Link from 'next/link'
+
 
 export default async function Home() {
-  const { rows } = await pool.query('SELECT * FROM users')
 
   return (
     <main>
       
-      <pre>{JSON.stringify(rows, null, 2)}</pre>
+      
       
     </main>
   )

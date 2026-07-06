@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header} from "@/app/components/header"
 import { Footer } from "@/app/components/footer"
+import Link from "next/link";
+import Providers from "./providers"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,14 +32,27 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
         <body className="min-h-full flex flex-col" style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center' }}>
+          <Providers>
           <Header></Header>
 
           <div style={{ backgroundColor: 'var(--darkpurple)', maxWidth: '90%', margin:'0 2em 0 2em', width: '100%', minHeight: '100vh', border:'none', borderRadius:'var(--mid)' }}>
             {children}
-
+              <div className="home">
+                <div className="ad-wrapper">
+                  {/* <Image src={} alt="ad1"></Image> */}
+                  <p>Ping Me-д тавтай морил</p>
+                    <Link href={'/login'} className='loginButton'>нэвтрэх</Link>
+                </div>
+                <div className="ad-wrapper">
+                  {/* <Image src={} alt="ad2"></Image> */}
+                  <p>Send anonymous questions by PingMe </p>
+                </div>
+              </div>
           </div>
           <Footer></Footer>
+          </Providers>
         </body>
     </html>
   );
 }
+

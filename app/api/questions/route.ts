@@ -4,10 +4,10 @@ import pool from '@/lib/db'
 export async function GET() {
     try {
         const { rows } = await pool.query(
-        `SELECT q.*, u.full_name, u.avatar_url, u.position
+        `SELECT q.*, p.full_name, p.avatar_url, p.position
         FROM questions q
-        JOIN users u ON q.receiver_id = u.user_id
-        ORDER BY q.asked_at DESC`
+        JOIN profiles p ON q.receiver_id = p.user_id
+        ORDER BY q.created_at DESC`
         )
         return NextResponse.json(rows)
     } catch (error) {

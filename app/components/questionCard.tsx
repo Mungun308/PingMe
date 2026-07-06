@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './questionCard.module.css'
 import Image from 'next/image';
-import proPic from './proPic.svg'
+import proPic from './img/proPic.svg'
 
 type questionCardProps={
     receiver_id: string;
@@ -16,10 +16,11 @@ export default function QuestionCard({receiver_id, context, asked_at, answer}: q
             
             <div className={styles.questionsWrapper}>
                 <div className={styles.profileWrapper}>
+                    <button>
                     <Image src={proPic} alt="propic"></Image>
+                    </button>
                 </div>      
                 <div className={styles.questionBox}>
-                    
                     <p id={styles.questionPrg}>{context}</p>
                 </div>
                 <div className={styles.answerBox}>
