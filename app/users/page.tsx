@@ -9,11 +9,11 @@ export default async function UsersPage() {
         <div className='profilesGrid' style={{margin: '1em', padding:'0', display:'flex', flexWrap:'wrap', gap:'var(--small)'}}>
         {user.map((user: any) => (
             <ProfileCard
-            key={user.id}
-            id={user.id}
-            full_name={user.full_name}
+            key={user.userId}
+            id={user.userId}
+            full_name={user.fullName}
             position={user.position}
-            avatar_url={user.avatar_url}
+            avatar_url={user.avatarUrl}
             />
         ))}
         </div>

@@ -33,23 +33,13 @@ export default function RootLayout({
     >
         <body className="min-h-full flex flex-col" style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center' }}>
           <Providers>
-          <Header></Header>
+            <Header></Header>
 
-          <div style={{ backgroundColor: 'var(--darkpurple)', maxWidth: '90%', margin:'0 2em 0 2em', width: '100%', minHeight: '100vh', border:'none', borderRadius:'var(--mid)' }}>
-            {children}
-              <div className="home">
-                <div className="ad-wrapper">
-                  {/* <Image src={} alt="ad1"></Image> */}
-                  <p>Ping Me-д тавтай морил</p>
-                    <Link href={'/login'} className='loginButton'>нэвтрэх</Link>
-                </div>
-                <div className="ad-wrapper">
-                  {/* <Image src={} alt="ad2"></Image> */}
-                  <p>Send anonymous questions by PingMe </p>
-                </div>
-              </div>
-          </div>
-          <Footer></Footer>
+            <div style={{ backgroundColor: 'var(--darkpurple)', maxWidth: '90%', margin:'7em 2em 0 2em', width: '100%', minHeight: '100vh', border:'none', borderRadius:'var(--mid)' }}>
+              {children}
+                
+            </div>
+            <Footer></Footer>
           </Providers>
         </body>
     </html>

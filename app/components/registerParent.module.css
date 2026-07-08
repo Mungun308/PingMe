@@ -1,0 +1,147 @@
+.body{
+    margin: 0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.container{
+    margin: 0;
+    padding:0;
+    display:flex;
+    gap:1em;
+    flex-direction:row;
+    justify-content: flex-start;
+    color:var(--whiteFontColor);
+    width:100%;
+}
+
+.tabButtons{
+    margin: 1em;
+    padding: 1em;
+    display:flex;
+    flex-direction:column;
+    /* border-radius: var(--mid);
+    background-color:var(--lighterpurple); */
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 15em;
+    min-height: 34em;
+    gap:1em;
+}
+
+
+.tabButton{
+    background-color: var(--lighterpurple);
+    min-width: 11em;
+    border: 2px solid var(--foreground);
+    border-radius: 30px;
+    box-shadow: var(--foreground) 4px 4px 0 0;
+    color: var(--whiteFontColor);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    gap:2em;
+}
+
+.tabButton:hover {
+    background-color: var(--beige);
+    color:var(--foreground)
+}
+
+.tabButton:active {
+    background-color: var(--darkerpurple);
+    box-shadow: var(--foreground) 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .tabButtons {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.generalTab{
+    margin:1em;
+    padding:2em;
+    display:flex;
+    flex-direction:column;
+    border-radius: var(--mid);
+    background-color:var(--lighterpurple);
+    color:var(--whiteFontColor);
+    min-width: 45%;
+    gap: 2em;
+}
+
+.generalTab label{
+    display:block;
+    font-weight:500;
+    margin-bottom:0.5em;
+
+}
+
+.generalTab label option{
+    background-color:var(--lighterpurple);
+    color:var(--whiteFontColor);
+
+}
+
+.generalTab input{
+    width:100%;
+    padding:0.5em;
+    border-radius: var(--mid);
+    border:1px solid var(--foreground);
+    background-color:var(--lighterpurple);
+    color:var(--whiteFontColor);
+}
+
+.profileWrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:2em;
+}
+
+.tabButton{
+    margin:0;
+    padding: 0.5em;
+    display:flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.saveButton{
+    margin: 1em;
+    padding: 1em;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--mid);
+    background-color:var(--lighterpurple);
+    color:var(--whiteFontColor);
+    cursor: pointer;
+}
+
+.saveButton:hover {
+    background-color: var(--beige);
+    color:var(--foreground)
+}
+
+.saveButton:active {
+    background-color: var(--darkerpurple);
+    box-shadow: var(--foreground) 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}

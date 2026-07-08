@@ -26,7 +26,7 @@ export default function ProfileCard({id, full_name, position, avatar_url}: Profi
                 <p className={styles.position}> {position} </p>
             </div>
             <button className={styles.viewButton}
-            onClick={()=>router.push(`./users/${id}`)}
+            onClick={()=>router.push(`/users/${id}`)}
             > үзэх </button>
         </div>
     )

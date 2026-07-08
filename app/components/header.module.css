@@ -1,11 +1,16 @@
 .header{
     margin: 1em;
-    padding: 0;
+    padding: 1em;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    position:fixed;
     z-index: 1000;
+    width:100%;
+    top:0;
+    left:0;
+    background-color: var(--black);
 }
 
 .logo-wrapper{
@@ -33,6 +38,18 @@
     backdrop-filter: blur(10.6px);
     -webkit-backdrop-filter: blur(10.6px);
     border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.search input{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: var(--whiteFontColor);
 }
 
 .header-button{
