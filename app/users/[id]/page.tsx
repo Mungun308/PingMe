@@ -10,17 +10,14 @@ export default async function UserProfilePage({ params }: { params: { id: string
   const session = await auth()
   if (!session?.user) redirect("/")
 
-  // Профайл татах
   const profile = await db.query.profiles.findFirst({
     where: eq(profiles.userId, id)
   })
   if (!profile) return <div>Профайл олдсонгүй</div>
 
-  // Асуултууд татах
   const qs = await db.select().from(questions)
     .where(eq(questions.receiverId, id))
 
-  // Өөрийн профайл үзэж байгаа эсэхийг шалгах
   const isOwner = profile.authUserId === session.user.id
 
   return (
