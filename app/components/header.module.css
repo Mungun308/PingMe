@@ -1,6 +1,6 @@
 .header{
-    margin: 1em;
-    padding: 1em;
+    margin:0;
+    padding: 1.5em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -10,7 +10,7 @@
     width:100%;
     top:0;
     left:0;
-    background-color: var(--black);
+    background-color: var(--foreground);
 }
 
 .logo-wrapper{
@@ -52,8 +52,8 @@
     color: var(--whiteFontColor);
 }
 
-.header-button{
-    margin: 0;
+.headerButton{
+    margin: 0.5em;
     padding: 0;
     display: flex;
     justify-content: space-around;
@@ -66,9 +66,143 @@
     padding: 0.5em;
     border: none;
     border-radius: var(--mid);
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--darkerpurple);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.6px);
     -webkit-backdrop-filter: blur(10.6px);
     
+}
+
+.dropdownWrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: var(--lighterpurple);
+  border: 2px solid var(--foreground);
+  border-radius: var(--mid);
+  box-shadow: var(--foreground) 4px 4px 0 0;
+  min-width: 200px;
+  z-index: 100;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.dropdownTitle {
+  color: var(--whiteFontColor);
+  padding: 0.5em;
+  margin: 0;
+  border-bottom: 1px solid var(--foreground);
+}
+
+.dropdownUser {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--foreground);
+  color: var(--whiteFontColor);
+}
+
+.dropdownEmail {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.dropdownItem {
+  padding: 0.5em 1em;
+  background: var(--lighterpurple);
+  border: none;
+  color: var(--whiteFontColor);
+  cursor: pointer;
+  text-align: left;
+  border-radius: var(--mid);
+  font-size: 14px;
+}
+
+.dropdownItem:hover {
+  background-color: var(--darkerpurple);
+}
+
+.dropdownEmpty {
+  color: var(--whiteFontColor);
+  opacity: 0.7;
+  padding: 0.5em;
+  font-size: 14px;
+}
+
+.notifItem {
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: var(--mid);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.notifItem:hover {
+    background-color: var(--darkerpurple);
+}
+
+.notifText {
+    color: var(--whiteFontColor);
+    font-size: 14px;
+    margin: 0;
+}
+
+.notifTime {
+    font-size: 11px;
+    opacity: 0.6;
+    color: var(--whiteFontColor);
+}
+
+.badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--lighterpurple);
+    border: 2px solid var(--foreground);
+    border-radius: var(--mid);
+    box-shadow: var(--foreground) 4px 4px 0 0;
+    z-index: 100;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.searchItem {
+    padding: 0.75em 1em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--whiteFontColor);
+}
+
+.searchItem:hover {
+    background-color: var(--darkerpurple);
+}
+
+.searchPosition {
+    font-size: 12px;
+    opacity: 0.7;
 }

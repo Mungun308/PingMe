@@ -14,21 +14,20 @@ export default async function Main(){
     return(
         <main>
             <section className={styles.mainParent}>
-                <div className={styles.profiles}>
-                    <Link href="/users" className={styles.allProfiles}>All profiles</Link>
+                <div className={styles.button} id="profile">
+                    <Link href="/users" className={styles.allProfiles}><p>All profiles</p></Link>
                 </div>
-                <div className={styles.welcome}></div>
 
-                <div className={styles.questions}>
-                    <Link href="/questions" className={styles.allQuestions}>All questions</Link>
+                <div className={styles.button}>
+                    <Link href="/questions" className={styles.allQuestions} id="question"><p>All questions</p></Link>
                 </div>
-                <div className={styles.register}>
+                <div className={styles.button}>
                     
-                    <Link href="/register" className={styles.registerButton}>
+                    <Link href="/register" className={styles.registerButton} id="register">
                         {profile ? "Бүртгэлээ засах" : "Бүртгэл үүсгэх"}
                     </Link>
                 </div>
-                <div className={styles.quote2}></div>
+                <div className={styles.button}> <p>Welcome to PingMe</p></div>
             </section>
         </main>
     )

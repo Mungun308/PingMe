@@ -1,3 +1,48 @@
 .mainParent{
-    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin:0;
+    padding:5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    display: flex;
+    margin: 1em 1em;
+    padding: 3em;
+    width: 100%;
+    border: 2px solid var(--foreground);
+    border-radius: var(--mid);
+    box-shadow: var(--foreground) 4px 4px 0 0;
+    color: var(--whiteFontColor);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    min-width: 18em;
+    min-height: 8em;
+    max-width: 20em;
+    max-height: 11em;
+}
+
+#profile{
+    background-color: var(--lime);
+
+}
+
+#questions{
+    background-color: var(--babypink);
+}
+
+#register{
+    background-color: var(--beige);
 }
